@@ -58,6 +58,7 @@ export default function FriendForm(props) {
             onChange={onChange}
             name='email'
             type='text'
+            placeholder='Enter an email!'
           />
         </label>
 
@@ -74,7 +75,6 @@ export default function FriendForm(props) {
             <option value='student'>Student</option>
             <option value='alumni'>Alumni</option>
             <option value='instructor'>Instructor</option>
-            <option value='tl'>Team Lead</option>
           </select>
         </label>
 
@@ -82,11 +82,23 @@ export default function FriendForm(props) {
         {/* ////////// RADIO BUTTONS ////////// */}
         {/* ////////// RADIO BUTTONS ////////// */}
         <label>Single
-
+          <input
+            type="radio"
+            name="civil"
+            value="single"
+            onChange={onChange}
+            checked={values.civil === "single"}
+          />
         </label>
 
         <label>Married
-
+          <input
+            type="radio"
+            name="civil"
+            value="married"
+            onChange={onChange}
+            checked={values.civil === "married"}
+          />
         </label>
       </div>
 
